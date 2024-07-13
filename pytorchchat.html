@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyTorch Documentation Chatbot</title>
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+        }
+        header {
+            background-color: #1f77b4;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #eee;
+            font-size: 1.2em;
+            max-width: 600px;
+        }
+        .chatbot-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .highlight-button {
+            background-color: #ffcc00;
+            border: none;
+            color: #333;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .highlight-button:hover {
+            background-color: #ffb700;
+        }
+        footer {
+            background-color: #1f77b4;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 0;
+        }
+        df-messenger {
+            --df-messenger-bot-message: {
+                color: #fff;
+                background-color: #1f77b4;
+            };
+            --df-messenger-user-message: {
+                color: #fff;
+                background-color: #6c757d;
+            };
+            --df-messenger-chat-background-color: #fff;
+            --df-messenger-font-color: #333;
+            --df-messenger-font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PyTorch Chatbot</h1>
+    </header>
+    <main>
+        <p>Welcome to the PyTorch  Chatbot! Ask me anything about PyTorch and I'll assist you with the information you need.</p>
+        <div class="chatbot-container">
+            <button class="highlight-button" onclick="document.querySelector('df-messenger').scrollIntoView({ behavior: 'smooth' });">Click Here to Chat!</button>
+            <df-messenger
+                project-id="delta-era-423104-i6"
+                agent-id="17f639c9-3c35-4ad8-b58c-032be39aeb8a"
+                language-code="en"
+                max-query-length="-1">
+                <df-messenger-chat-bubble
+                    chat-title="PyTorch Chatbot">
+                </df-messenger-chat-bubble>
+            </df-messenger>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 PyTorch Documentation Chatbot. All rights reserved.
+    </footer>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+</body>
+</html>
